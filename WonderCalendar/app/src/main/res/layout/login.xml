@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleLabel"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Wonder Calendar"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_alignParentTop="true"
+        />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="#ffc6c6c6"
+        android:stretchColumns="2,3,4"
+        android:id="@+id/loginTable"
+        android:layout_above="@+id/ButtonLogin">
+
+        <TableRow>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/idicon"
+                android:layout_margin="7dp"
+                />
+            <EditText
+                android:id="@+id/userId"
+                android:layout_marginLeft="15dp"
+                android:layout_span="3"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:singleLine="true"
+                android:background="@null"
+                android:layout_gravity="center_vertical"
+                />
+        </TableRow>
+        <View
+            android:layout_height="1dp"
+            android:background="#ff9c9c9c"
+            />
+        <TableRow android:layout_height="wrap_content">
+            <ImageView
+                android:background="@drawable/passwordicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="7dp"
+                />
+
+            <EditText
+                android:layout_marginLeft="15dp"
+                android:id="@+id/userPass"
+                android:layout_span="3"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/ButtonLogin"
+        android:layout_above="@+id/signup"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="로그인"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/signup"
+        android:layout_above="@+id/facebookLogin">
+
+        <Button
+            android:id="@+id/signupButton"
+            android:text="회원가입"
+            android:background="#00000000"
+            android:singleLine="true"
+            android:textSize="10dp"
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/findId"
+            android:background="#00000000"
+
+            android:text="ID 찾기"
+            android:textSize="10dp"
+            android:singleLine="true"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@+id/findPass"/>
+        <Button
+            android:id="@+id/findPass"
+            android:background="#00000000"
+            android:text="Pass 찾기"
+            android:textSize="10dp"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wcLogo"
+        android:id="@+id/facebookLogin"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/facebookicon"
+
+            android:background="@drawable/facebookicon"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ButtonFacebookLogin"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/facebookicon"
+            android:layout_gravity="center_vertical"
+            android:text="페이스북으로 로그인하기"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/wcLogo"
+        android:background="@drawable/wclogo"
+        >
+    </ImageView>
+
+
+
+</RelativeLayout>
