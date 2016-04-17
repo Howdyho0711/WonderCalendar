@@ -20,9 +20,9 @@ public class MainActivity extends Activity {
         CognitoCachingCredentialsProvider sCredential = AwsUtil.getCredProvider(getApplicationContext());
 
         AmazonDynamoDBClient ddbClient = new AmazonDynamoDBClient(sCredential);
-        //DynamoDBMapper mapper = new DynamoDBMapper(ddbClient);
+        DynamoDBMapper mapper = new DynamoDBMapper(ddbClient);
         ddbClient.setRegion(Region.getRegion(Regions.AP_NORTHEAST_1));
 
-        new AwsCall().execute(ddbClient);
+        new AwsCall().execute(mapper);
     }
 }

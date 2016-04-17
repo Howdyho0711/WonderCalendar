@@ -10,15 +10,15 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 /**
  * Created by Hyun on 2016-04-17.
  */
-public class AwsCall extends AsyncTask<AmazonDynamoDBClient, Void, Void> {
+public class AwsCall extends AsyncTask<DynamoDBMapper, Void, Void> {
 
     @Override
-    protected Void doInBackground(AmazonDynamoDBClient... ddbClient) {
+    protected Void doInBackground(DynamoDBMapper... mapper) {
 
-        DynamoDBMapper mapper = new DynamoDBMapper(ddbClient[0]);
+       // DynamoDBMapper mapper = new DynamoDBMapper(ddbClient[0]);
 
         //try {
-            AwsUserInfo temp = mapper.load(AwsUserInfo.class, "wOnDErCAl2NdaRmaSTer");
+            AwsUserInfo temp = mapper[0].load(AwsUserInfo.class, "wOnDErCAl2NdaRmaSTer");
 
             System.out.println("Load Item - ID : "+temp.getUserID()+" PW : "+temp.getUserPW());
         //} catch(Exception e) {

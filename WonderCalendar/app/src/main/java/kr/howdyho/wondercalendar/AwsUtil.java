@@ -16,10 +16,10 @@ public class AwsUtil {
         if(sCredentialsProvider == null) {
             sCredentialsProvider = new CognitoCachingCredentialsProvider(
                     context.getApplicationContext(),
-                    "080227813135", // AWS Account ID
+                   // "080227813135", // AWS Account ID
                     "ap-northeast-1:ed237a7d-156f-4385-b021-3092081d75ce",// Identity Pool ID
-                    "arn:aws:iam::080227813135:role/Cognito_WonderCalendarAuth_Role", // Auth Role
-                    "arn:aws:iam::080227813135:role/Cognito_WonderCalendarUnauth_Role", // Unauth Role
+                    //"arn:aws:iam::080227813135:role/Cognito_WonderCalendarAuth_Role", // Auth Role
+                    //"arn:aws:iam::080227813135:role/Cognito_WonderCalendarUnauth_Role", // Unauth Role
                     Regions.AP_NORTHEAST_1 // Region
             );
         }
