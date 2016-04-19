@@ -1,6 +1,8 @@
 package kr.howdyho.wondercalendar;
 
 import com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.*;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+
 /**
  * Created by Hyun on 2016-04-16.
  */
@@ -26,5 +28,8 @@ public class AwsUserInfo {
     public void setUserPW(String pw) {
         this.UserPW = pw;
     }
+
+
+
     // etc
 }

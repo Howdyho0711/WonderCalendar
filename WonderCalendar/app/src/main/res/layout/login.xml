@@ -41,11 +41,10 @@
                 android:layout_marginLeft="15dp"
                 android:layout_span="3"
                 android:inputType="textEmailAddress"
-                android:hint="Email"
                 android:singleLine="true"
                 android:background="@null"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="wOnDErCAl2NdaRmaSTer" />
         </TableRow>
         <View
             android:layout_height="1dp"
@@ -63,14 +62,13 @@
                 android:layout_marginLeft="15dp"
                 android:id="@+id/userPass"
                 android:layout_span="3"
-                android:hint="Password"
                 android:inputType="textPassword"
                 android:singleLine="true"
                 android:background="@null"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                />
+                android:text="mAsTEr1e10@" />
         </TableRow>
 
     </TableLayout>
@@ -88,7 +86,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="로그인"/>
+            android:text="로그인"
+            android:id="@+id/login" />
     </LinearLayout>
 
     <RelativeLayout
